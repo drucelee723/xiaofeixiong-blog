@@ -16,6 +16,9 @@ const nextConfig: NextConfig = {
   // 静态导出配置
   output: "export",
   
+  // GitHub Pages basePath (仓库名)
+  basePath: "/xiaofeixiong-blog",
+  
   // 图片优化配置
   images: {
     unoptimized: true,
