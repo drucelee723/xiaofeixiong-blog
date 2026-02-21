@@ -1,5 +1,20 @@
 [
   {
+    "slug": "embedded-ai/echo-mate-face-recognition",
+    "title": "RV1106嵌入式人脸识别系统开发实战",
+    "description": "基于Rockchip RV1106开发AI桌面机器人，实现RetinaFace人脸检测、LVGL界面、RKNN模型推理的完整开发流程及踩坑记录",
+    "category": "embedded-ai",
+    "tags": [
+      "RV1106",
+      "RKNN",
+      "人脸识别",
+      "RetinaFace",
+      "LVGL",
+      "嵌入式AI"
+    ],
+    "content": " RV1106嵌入式人脸识别系统开发实战 本文记录了在 Rockchip RV1106 平台上开发 AI 桌面机器人 Echo-Mate 人脸识别功能的完整过程，包括模型部署、UI开发、以及各种踩坑解决方案。 项目概述 硬件平台 | 组件 | 规格 | |------|------| | CPU | Rockchip RV1106 (ARM Cortex-A7) | | NPU | 0.5 TOPS RKNPU | | 内存 | 64MB DDR2 | | 显示 | 320x240 LCD | | 摄像头 | UYVY格式，支持ISP | 功能特性 - 人脸检测: 使用 RetinaFace RKNN 模型，640x640 输入 - 人脸识别: 简化版特征匹配（可扩展 MobileFaceNet） - 用户界面: LVGL 8.x，三个标签页（识别/注册/管理） - 本地存储: 人脸数据库保存到文件系统 系统架构 技术栈 模型 | 模型 | 用途 | 输入尺寸 | 备注 | |------|------|----------|------| | RetinaFace | 人脸检测 | 640x640 RGB | 输出bbox + 5关键点 | | MobileFaceNet | 特征提取 | 112x112 RGB | 预留，当前使用简化匹配 | 软件库 | 库 | 用途 | |-----|------| | RKNN SDK | NPU模型推理 | | OpenCV-Mobile | 图像处理、摄像头采集 | | LVGL 8.x | 嵌入式GUI | | pthread | 多线程采集 | 核心代码实现 1. RetinaFace 模型推理 RetinaFace 输出三个张量，需要正确解码： 2. 摄像头采集线程 3. LVGL UI 定时更新 踩坑记录与解决方案 问题1: 画面显示绿色/蓝色噪点 现象: 摄像头画面出现大量绿色和蓝色小点，物体边缘尤其明显。 原因: 对 BGR565 格式的图像进行 时，双线性插值会跨越颜色通道的位边界，导致颜色错乱。 问题2: 无人脸时误检测 现象: 即使画面中没有人脸，系统也显示 \"Face detected\"，置信度异常高（30-60）。 原因: 模型输出类型是 （type=2），但代码使用 读取。 问题3: 边界框坐标为"
+  },
+  {
     "slug": "embedded-linux/arm-linux-dev-setup",
     "title": "ARM Linux开发环境搭建完全指南",
     "description": "从零开始搭建ARM Linux交叉编译环境，包括工具链安装、NFS配置、TFTP下载等完整流程",
