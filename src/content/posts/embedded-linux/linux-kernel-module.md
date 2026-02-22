@@ -1,7 +1,7 @@
 ---
 title: "Linux内核模块开发入门"
 description: "学习Linux内核模块的基本概念，编写第一个内核模块，理解模块的加载和卸载过程"
-date: "2024-01-25"
+date: "2026-02-18"
 category: "embedded-linux"
 tags: ["Linux", "内核", "驱动开发", "内核模块"]
 author: "小肥熊"

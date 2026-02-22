@@ -1,7 +1,7 @@
 ---
 title: "RV1106嵌入式人脸识别系统开发实战"
 description: "基于Rockchip RV1106开发AI桌面机器人，实现RetinaFace人脸检测、LVGL界面、RKNN模型推理的完整开发流程及踩坑记录"
-date: "2025-02-21"
+date: "2026-02-21"
 category: "embedded-ai"
 tags: ["RV1106", "RKNN", "人脸识别", "RetinaFace", "LVGL", "嵌入式AI"]
 author: "小肥熊"

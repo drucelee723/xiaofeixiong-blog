@@ -1,7 +1,7 @@
 ---
 title: "ARM Linux开发环境搭建完全指南"
 description: "从零开始搭建ARM Linux交叉编译环境，包括工具链安装、NFS配置、TFTP下载等完整流程"
-date: "2024-01-15"
+date: "2026-02-18"
 category: "embedded-linux"
 tags: ["Linux", "ARM", "交叉编译", "嵌入式开发"]
 author: "小肥熊"
